@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROCK, PAPER, SCISSORS</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="buttons">
+    <button onclick="
+      playGame('Rock')
+    " class="button-click"><img src="img/rock-emoji.png" alt="" class="image-icon"></button>
+
+    <button onclick="
+      playGame('Paper')
+    " class="button-click"><img src="img/paper-emoji.png" alt="" class="image-icon"></button>
+
+    <button onclick="
+      playGame('Scissors')
+    " class="button-click"><img src="img/scissors-emoji.png" alt="" class="image-icon"></button>
+  </div>
+
+  <p id="displayResult" class="displayResult"></p>
+
+  <button onclick="
+    score.wins = 0, score.losses = 0, score.ties = 0
+    localStorage.removeItem('score')
+    let resultDisplay = document.getElementById('displayResult')
+      resultDisplay.innerHTML = `Board cleared. Play again. <br><span class='win'>Wins: ${score.wins}</span> <span class='lose'>Losses: ${score.losses}</span> <span class='tie'>Ties: ${score.ties}</span>`
+  " class="reset-score">Reset Score</button>
+
+</body>
+</html>
